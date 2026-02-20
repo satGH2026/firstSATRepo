@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Funnel Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content container">
+      <p class="badge">Marketing Funnel Generator</p>
+      <h1>Create a Landing Page Tailored to Your Business</h1>
+      <p class="lead">
+        Select your business sector and type to generate personalized funnel copy that converts.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Tell Us About Your Business</h2>
+      <form id="business-form" class="form-grid">
+        <label>
+          Business Sector
+          <select id="sector" name="sector" required>
+            <option value="">Choose a sector</option>
+            <option value="Health & Wellness">Health & Wellness</option>
+            <option value="Technology">Technology</option>
+            <option value="Education">Education</option>
+            <option value="Retail">Retail</option>
+            <option value="Finance">Finance</option>
+            <option value="Hospitality">Hospitality</option>
+          </select>
+        </label>
+
+        <label>
+          Type of Business
+          <input
+            id="businessType"
+            name="businessType"
+            type="text"
+            placeholder="e.g. Fitness Studio, SaaS Platform"
+            required
+          />
+        </label>
+
+        <button type="submit" class="btn btn-primary">Generate Funnel Landing Page</button>
+      </form>
+    </section>
+
+    <section id="funnel-output" class="panel hidden" aria-live="polite">
+      <h2 id="funnel-title"></h2>
+      <p id="funnel-subtitle"></p>
+
+      <div class="feature-grid">
+        <article>
+          <h3>Awareness Stage</h3>
+          <p id="awareness-copy"></p>
+        </article>
+        <article>
+          <h3>Consideration Stage</h3>
+          <p id="consideration-copy"></p>
+        </article>
+        <article>
+          <h3>Decision Stage</h3>
+          <p id="decision-copy"></p>
+        </article>
+      </div>
+
+      <a id="cta-link" href="contact.html" class="btn btn-accent">Contact Us to Launch This Funnel</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

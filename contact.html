@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Smart Funnel Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container contact-wrapper">
+    <section class="panel">
+      <h1>Contact Us</h1>
+      <p class="lead" id="contact-context">Tell us more about your goals and we will help you launch your tailored funnel.</p>
+
+      <form class="contact-form" action="#" method="post">
+        <label>
+          Name *
+          <input type="text" name="name" required autocomplete="name" />
+        </label>
+
+        <label>
+          Email Address *
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+
+        <label>
+          Message *
+          <textarea name="message" rows="6" required placeholder="Tell us your goals, audience, and campaign timeline."></textarea>
+        </label>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <a href="index.html" class="back-link">← Back to Funnel Builder</a>
+    </section>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const sector = params.get('sector');
+    const businessType = params.get('businessType');
+
+    if (sector && businessType) {
+      const context = document.getElementById('contact-context');
+      context.textContent = `You are building a campaign for a ${businessType} business in the ${sector} sector. Share your message and we will follow up.`;
+    }
+  </script>
+</body>
+</html>
